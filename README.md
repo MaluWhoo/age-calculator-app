@@ -14,7 +14,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### The challenge
 
-[To develop....]
+#### To develop....
 
 Users should be able to:
 
