@@ -22,16 +22,17 @@ body {
 
 .card-calculator {
     background-color: var(--White);
-    width: clamp(450px, 80vw, 800px);
-    height: clamp(450px, 80vw, 600px);
+    width: clamp(350px, 90vw, 800px);
+    height: auto;
     border-radius: 28px 28px 150px 28px;
-    padding: 50px;
+    padding: clamp(20px, 5vw, 56px);
+    padding-bottom: 50px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
     .input-fields {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 20px;  
         margin-top: 20px;
 
         .input {
@@ -49,16 +50,14 @@ body {
             }
 
             input {
-                width: 150px;
-                width: clamp(100px, 100vw, 150px);
-                height: 70px;
+                width: clamp(85px, 25vw, 150px);
+                height: clamp(65px, 10vw, 70px);
                 border: solid 1px var(--Grey-100);
                 border-radius: 10px;
                 font-weight: 700;
                 font-size: 28px;
                 font-size: clamp(18px, 5vw, 28px);
                 padding-left: clamp(10px, 2vw, 20px);
-                /* width: 100px; */
 
                 &:hover {
                     border-color: var(--Purple-500);
@@ -71,13 +70,17 @@ body {
 
 .divider {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    
     hr.divider-line {
+        border: 0;
         border-top: 1px solid var(--Grey-100);
         width: 100%;
+        position: absolute;
+        z-index: 1;
     }
 
     .calculate-btn {
@@ -86,6 +89,11 @@ body {
         padding: 20px;
         border: none;
 
+        z-index: 2;;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         &:hover {
             cursor: pointer;
             background-color: var(--Black);
@@ -93,7 +101,7 @@ body {
         }
 
         img {
-            width: 40px;
+            width: 25px;
             display: flex;
         }
     }
@@ -114,10 +122,31 @@ body {
     }
 }
 
-@media (min-width: 768px) {
-
+@media (max-width: 375px) {
+    .card-calculator {
+        .input-fields {
+            justify-content: center;
+        }
+    }
 }
 
+@media (min-width: 768px) {
+    .divider {
 
+        padding: 0;
+
+        .calculate-btn {
+            padding: 25px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        hr.divider-line {
+            position: relative;
+        }
+    }
+}
 
 

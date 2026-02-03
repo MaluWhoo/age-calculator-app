@@ -25,8 +25,8 @@ Users should be able to:
   - [X] The month number is not between 1-12
   - [X] The date is in the future
   - [ ] The date is invalid e.g. 31/04/1991 (there are 30 days in April)
-- [ ] View the optimal layout for the interface depending on their device's screen size
-- [ ] See hover and focus states for all interactive elements on the page
+- [X] View the optimal layout for the interface depending on their device's screen size
+- [X] See hover and focus states for all interactive elements on the page
 - [ ] **Bonus**: See the age numbers animate to their final number when the form is submitted
 
 ### Screenshot
