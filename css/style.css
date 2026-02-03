@@ -20,6 +20,13 @@ body {
     /* height: clamp(100vh, 100vw, 100vh); */
 }
 
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 .card-calculator {
     background-color: var(--White);
     width: clamp(350px, 90vw, 800px);
